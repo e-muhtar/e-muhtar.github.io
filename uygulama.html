@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function redirectToAppStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/android/i.test(userAgent)) {
+                // Android device
+                window.location.href = 'https://play.google.com/store/apps/details?id=tr.com.yenimedya.haberler';
+            } else if (/iPad|iPhone|iPod/i.test(userAgent)) {
+                // iOS device
+                window.location.href = 'https://apps.apple.com/il/app/haberler-com/id339144085';
+            } else {
+                // Redirect to a generic URL or provide a message for unsupported devices
+                window.location.href = 'https://example.com/unsupported-device';
+            }
+        }
+        redirectToAppStore();
+    </script>
+</head>
+<body>
+    <!-- You can add a message or content here if needed -->
+</body>
+</html>
